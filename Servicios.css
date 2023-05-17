@@ -1,0 +1,98 @@
+body {
+    background-image: url('img/FONDO5.jpg');
+  }
+  
+  .navbar {
+    background-color: #fff;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-brand img {
+    width: 100px;
+    height: 40px;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #000;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitted-data {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  footer nav ul li {
+    margin: 0 10px;
+  }
+  
+  footer nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer nav ul li a:hover {
+    color: #4a4aee;
+  }
+  

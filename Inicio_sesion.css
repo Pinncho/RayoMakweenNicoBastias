@@ -1,0 +1,28 @@
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer nav ul li {
+    display: inline;
+  }
+  
+  footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  footer p {
+    margin-top: 10px;
+  }
+  
+  
