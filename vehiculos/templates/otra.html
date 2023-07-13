@@ -1,0 +1,70 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <title>Vehiculos</title>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Vehiculos</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Patente</th>
+                    <th>Marca</th>
+                    <th>Model</th>
+                    <th>Categoria</th>
+                    <th>Imagen</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for auto in vehiculos%}
+                <tr>
+                    <td>{{ auto.patente }}</td>
+                    <td>{{ auto.marca }}</td>
+                    <td>{{ auto.modelo }}</td>
+                    <td>{{ auto.categoria }}</td>
+                    {% if auto.imagen %}
+                    <td>
+                        <img src="{{ auto.imagen.url }}" style="height: 50px; width: 50px;">
+                    </td>
+                    {% else %}
+                    <td>
+                        <p style="color:red">No tiene foto</p>
+                    </td>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <td>
+                            <a href="{% url 'eliminar' auto.patente %}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    {% else %}
+                        <td>
+                            <a href="#" class="btn btn-danger">No tiene permiso</a>
+                        </td>
+                    {% endif %}
+                    
+                    <td>
+                        <a href="{% url 'modificar' auto.patente %}" class="btn btn-warning">Modificar</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'crear' %}" class="btn btn-success">Crear Vehiculo</a>
+    </div>
+   
+</body>
+</html>
+{% endblock %}
